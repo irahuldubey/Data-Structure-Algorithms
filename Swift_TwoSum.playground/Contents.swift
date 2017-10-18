@@ -23,14 +23,27 @@ import UIKit
 
 //Time and Space Complexity is O(n) as we are using one for loop
 
-func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+func twoSum(_ array: [Int], _ target: Int) -> [Int] {
+
+  //Check for the edge case scenario for the array count and positive number.
+  guard array.count > 0 && target > 0 else {
+    return []
+  }
+
+  //Create a Hash Map for the value and position in the array
+  
   var indexValueDictionary = Dictionary<Int, Int>()
-  for (index, value) in nums.enumerated() {
-    if nums.count > index {
-      let complement = target - nums[index]
+  
+  //Loop through the array 
+  
+  for (index, value) in array.enumerated() {
+    if array.count > index {
+      let complement = target - array[index]
       if indexValueDictionary.keys.contains(complement) {
+        //Exit condition when we got the match
         return [indexValueDictionary[complement]!, index]
       }
+      //Inset the value for the given key as index
       indexValueDictionary[value] = index
     }
   }
