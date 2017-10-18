@@ -38,7 +38,7 @@ func twoSum(_ array: [Int], _ target: Int) -> [Int] {
   
   for (index, value) in array.enumerated() {
     if array.count > index {
-      let complement = target - array[index]
+      let complement = target - value
       if indexValueDictionary.keys.contains(complement) {
         //Exit condition when we got the match
         return [indexValueDictionary[complement]!, index]
