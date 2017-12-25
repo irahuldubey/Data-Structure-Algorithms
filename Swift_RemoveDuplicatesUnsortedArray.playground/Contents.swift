@@ -9,7 +9,7 @@ var unsortedArray = [1,2,4,3,1,6,6]
 func removeDuplicatedFromUnsorted(array: [Int]) -> [Int] {
   var dupDictionary: [Int : Int] =  [Int: Int]()
   for arrayValue in 0..<array.count {
-    if let dupValue = dupDictionary[arrayValue] {
+    if let _ = dupDictionary[arrayValue] {
       // Discard it..
     }
     else{
@@ -21,3 +21,5 @@ func removeDuplicatedFromUnsorted(array: [Int]) -> [Int] {
 
 print(removeDuplicatedFromUnsorted(array: unsortedArray))
 //O(n)
+
+
