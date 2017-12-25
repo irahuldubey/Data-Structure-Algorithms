@@ -5,9 +5,6 @@ import UIKit
 /*****************************************************************************************************************/
 //   Remove duplicated elements from an sorted array
 /*****************************************************************************************************************/
-
-var inputArray = [1,2,3,3,4,5]
-
 func removeDuplicatesFromSorted(array: inout [Int]) -> [Int] {
   for i in 0..<array.count {
     if array.count > i + 1 {
@@ -19,7 +16,20 @@ func removeDuplicatesFromSorted(array: inout [Int]) -> [Int] {
   }
   return array
 }
-
+var inputArray = [1,2,3,3,4,5]
 print(removeDuplicatesFromSorted(array: &inputArray))
+/*****************************************************************************************************************/
 
+
+/*****************************************************************************************************************/
+///Remove duplicated through sets
+func removeDuplicate(array: [Int]) -> Set<Int> {
+  var arraySet: Set = Set<Int>()
+  for value in array {
+    arraySet.insert(value)
+  }
+  return arraySet
+}
+
+print(removeDuplicate(array: [2,3,1,1]))
 /*****************************************************************************************************************/
