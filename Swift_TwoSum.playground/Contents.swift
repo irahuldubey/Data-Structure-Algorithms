@@ -26,7 +26,7 @@ import UIKit
 func twoSum(_ array: [Int], _ target: Int) -> [Int] {
 
   //Check for the edge case scenario for the array count and positive number.
-  guard array.count > 0 && target > 0 else {
+  guard array.count > 0 else {
     return []
   }
 
