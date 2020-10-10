@@ -51,4 +51,3 @@ func twoSum(_ array: [Int], _ target: Int) -> [Int] {
 }
 
 print(twoSum([3,2,4], 6))
-
