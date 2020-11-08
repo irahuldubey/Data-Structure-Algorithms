@@ -7,7 +7,7 @@ func maxRepeatingCharacter(inputString: String) -> String? {
     let charArray = Array(inputString)
     var count = 0
     var maxCount = 1
-    var repetitionCharacter: Character = charArray.first!
+    var repetitionCharacter: Character?
     
     for (index, value) in charArray.enumerated() {
         if index < charArray.count - 1 && charArray[index] == charArray[index + 1] {
@@ -20,7 +20,7 @@ func maxRepeatingCharacter(inputString: String) -> String? {
             maxCount = 1
         }
     }
-    return String(repetitionCharacter)
+    return String(repetitionCharacter!)
 }
 
 let repeatedOccurences = maxRepeatingCharacter(inputString: "aaaabcbcdbbeeeeee")
