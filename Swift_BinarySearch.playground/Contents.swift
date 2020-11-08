@@ -19,10 +19,10 @@ func search(_ nums: [Int], _ target: Int) -> Int {
     return -1
 }
 
-// Recursive method
-func search(_ nums: [Int], _ target: Int, range: Range<Int>) -> Int {
-    return -1
-}
+//// Recursive method
+//func search(_ nums: [Int], _ target: Int, range: Range<Int>) -> Int {
+//    return -1
+//}
 
 // 1 2 3 4 5
 // 0 ... 4
