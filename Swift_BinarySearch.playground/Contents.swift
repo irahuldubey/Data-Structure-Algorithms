@@ -8,6 +8,7 @@ func search(_ nums: [Int], _ target: Int) -> Int {
     
     while upperBound > lowerBound {
         let midIndex = lowerBound + (upperBound - lowerBound) / 2
+        print("midIndex", midIndex)
         if nums[midIndex] == target {
           return midIndex
         } else if nums[midIndex] < target {
@@ -19,12 +20,33 @@ func search(_ nums: [Int], _ target: Int) -> Int {
     return -1
 }
 
-//// Recursive method
-//func search(_ nums: [Int], _ target: Int, range: Range<Int>) -> Int {
-//    return -1
+print(search([0, 1, 21, 33, 45, 45, 61, 71, 72, 73], 33))
+
+//func binarySearch<T: Comparable>(_ a: [T], key: T, range: Range<Int>) -> Int? {
+//    if range.lowerBound >= range.upperBound {
+//        // If we get here, then the search key is not present in the array.
+//        return nil
+//
+//    } else {
+//        // Calculate where to split the array.
+//        let midIndex = range.lowerBound + (range.upperBound - range.lowerBound) / 2
+//
+//        // Is the search key in the left half?
+//        if a[midIndex] > key {
+//            return binarySearch(a, key: key, range: range.lowerBound ..< midIndex)
+//
+//        // Is the search key in the right half?
+//        } else if a[midIndex] < key {
+//            return binarySearch(a, key: key, range: midIndex + 1 ..< range.upperBound)
+//
+//        // If we get here, then we've found the search key!
+//        } else {
+//            return midIndex
+//        }
+//    }
 //}
+//
+//let numbers = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67]
+//print(binarySearch(numbers, key: 43, range: 0 ..< numbers.count))    // gives 13
+//
 
-// 1 2 3 4 5
-// 0 ... 4
-
-print(search([1,2,3,4,5], 4))
