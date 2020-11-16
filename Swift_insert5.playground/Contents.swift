@@ -1,6 +1,6 @@
 import UIKit
 
-public func solution(_ N: Int) -> Int {
+public func insert5InDigits(_ N: Int) -> Int {
 
     if N == 0 { return 0 }
     
@@ -30,8 +30,8 @@ extension BinaryInteger {
     }
 }
 
-print(solution(127))
-print(solution(5))
-print(solution(50))
-print(solution(05))
+print(insert5InDigits(1207))
+print(insert5InDigits(5))
+print(insert5InDigits(50))
+print(insert5InDigits(05))
 
