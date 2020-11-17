@@ -15,9 +15,9 @@ func minReplacementOf(A: [Int]) -> Int {
             flipCount += 1
         }
     }
+    
     return min(flipCount, A.count - flipCount)
 }
 
 print(minReplacementOf(A: [1,0,1,0,1,1]))
-
 
