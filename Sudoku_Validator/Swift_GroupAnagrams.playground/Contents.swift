@@ -48,7 +48,7 @@ func groupAnagramsWithoutSorting(_ strs: [String]) -> [[String]] {
         for code in str.unicodeScalars {
             print(code.value)
             let value = code.value - 97
-            hash += UInt64(pow(5.0, Double(value)))
+            hash += UInt64(value)
         }
         return hash
     }
