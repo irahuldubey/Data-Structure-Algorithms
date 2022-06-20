@@ -27,3 +27,4 @@ func removeDuplicates1(_ nums: inout [Int]) -> Int {
 
 var inpurArray1 = [0,0,1,1,1,2,2,3,3,4,5]
 print(removeDuplicates(&inpurArray1))
+
